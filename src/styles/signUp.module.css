@@ -1,0 +1,60 @@
+
+.logo{
+    position: absolute;
+    top: 48px;
+    left: 48px;
+    width: 112px;
+    z-index: 2;
+}
+
+.container{
+    max-width: 656px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.signUp_wrapper{
+    background-color: #fff;
+    position: relative;
+    border-radius: 35px;
+    padding: 60px 10px 80px;
+    margin-top: 56px;
+    text-align: center;
+}
+
+.sign_decoration{
+    position: absolute;
+    right: -320px;
+    top: 420px;
+    z-index: 1;
+}
+
+.title{
+    font-size: 32px;
+    font-weight: 600;
+    color: #000;
+}
+
+.logIn_btn{
+    display: block;
+    max-width: 176px;
+    width: 100%;
+    margin: 64px auto 16px;
+    background-color: #000;
+    color: #fff;
+    line-height: 48px;
+    font-weight: 600;
+    border-radius: 25px;
+}
+
+.sign_link{
+    color: #000;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+@media (max-width: 800px) {
+    .sign_decoration{
+        display: none;
+    }
+}

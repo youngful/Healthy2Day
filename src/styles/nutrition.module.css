@@ -1,0 +1,143 @@
+.container {
+    max-width: 1270px;
+    padding: 0 5px 144px;
+    margin: 0 auto;
+}
+
+.title{
+    text-align: center;
+    margin: 50px 0;
+}
+
+.red_span {
+    color: #FF002C;
+}
+
+.calc_group {
+    display: flex;
+    gap: 13px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.calc_wrapper {
+    background-color: #fff;
+    border-radius: 25px;
+    max-width: 680px;
+    width: 100%;
+    padding: 5px  10px 57px;
+}
+
+.slider:not(:first-of-type) {
+    margin-top: 32px;
+}
+
+
+.buttonContainer {
+    margin: 48px;
+}
+
+.drop_list{
+    margin-top: 28px;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    font-size: 12px;
+    font-weight: 400;
+    margin-left: 32px;
+}
+
+
+.img_wrapper {
+    position: relative;
+    width: fit-content;
+}
+
+
+.img_span {
+    text-align: right;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+}
+
+.calculateButton{
+    background-color: #000;
+    color: #fff;
+    max-width: 224px;
+    width: 100%;
+    height: 48px;
+    border-radius: 25px;
+    display: block;
+    margin: 40px auto 0;
+    cursor: pointer;
+}
+
+.result_block{
+    background-color: #fff;
+    border-radius: 25px;
+    text-align: center;
+    width: 400px;
+    padding: 48px 0;
+}
+
+.result_title_wrapper{
+    display: flex;
+    font-size: 20px;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    color: #000;
+}
+
+.result_sub_title{
+    margin: 33px 0 44px;
+    color: #000;
+}
+
+.result_kcal{
+    background-color: #FF002C;
+    color: #fff;
+    padding: 12px 0;
+    border-radius: 25px;
+    display: block;
+    max-width: 113px;
+    margin: 0 auto 44px;
+}
+
+.result_group{
+    display: flex;
+    justify-content: space-between;
+    max-width: 250px;
+    align-items: center;
+    margin: 16px auto 0;
+}
+
+.result_percentage{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+    justify-content: center;
+}
+
+.save_btn{
+    cursor: pointer;
+}
+
+@media (max-width: 1300px) {
+    .img_wrapper {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .drop_list{
+        gap: 10px;
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,64 @@
+.sliderContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 624px;
+    margin: 0 auto;
+}
+
+/* Slider.module.css */
+.slider {
+    -webkit-appearance: none;
+    max-width: 400px;
+    width: 100%;
+    height: 2px;
+    border-radius: 5px;
+    background: #FF002C;
+    outline: none;
+    transition: opacity 0.2s;
+    margin: 0 10px;
+}
+
+.label_name {
+    font-size: 12px;
+    font-weight: 400;
+    width: 75px;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #FF002C;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #000;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+
+.valueDisplay {
+    border: 1px solid #C9C9C9;
+    border-radius: 10px;
+    width: 62px;
+    height: 30px;
+    text-align: center;
+    outline: none;
+    background-color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.valueDisplay::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}

@@ -1,0 +1,132 @@
+.fruit_img_right,
+.fruit_img_left {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    height: 175vh;
+}
+
+.fruit_img_left {
+    left: 0;
+}
+
+.container {
+    max-width: 1000px;
+    padding: 0 5px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.about_content {
+    margin: 0 auto;
+    max-width: 528px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+}
+
+.about_title {
+    font-family: 'Natashawalker';
+    font-size: 60px;
+    color: #000;
+    font-weight: 700;
+    line-height: 72px;
+    margin: 60px 0;
+}
+
+.team_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.person_box {
+    color: #000;
+    max-width: 300px;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 0 24px 41px;
+}
+
+.person_name {
+    font-size: 20px;
+    line-height: 25px;
+    margin: 21px 0;
+}
+
+.red_span {
+    color: #FF002C;
+}
+
+.person_skill {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.person_descr {
+    font-size: 15px;
+    font-weight: 400;
+    max-width: 227px;
+}
+
+.about_history {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 100px;
+}
+
+@media (max-width: 1300px) {
+    .about_history {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 950px) {
+    .about_history {
+        max-width: 400px;
+    }
+
+    .fruit_img_left,
+    .fruit_img_right {
+        display: none;
+    }
+}
+
+@media (max-width: 700px) {
+    .about_title {
+        font-size: 40px;
+        margin: 30px 0;
+    }
+
+    .about_history,
+    .about_content {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 420px) {
+    .image {
+        width: 100px;
+    }
+
+    .team_wrapper {
+        gap: 20px;
+    }
+
+    .person_name {
+        font-size: 14px;
+    }
+
+    .person_box {
+        max-width: 160px;
+    }
+
+    .person_skill,
+    .person_descr {
+        font-size: 10px;
+    }
+}

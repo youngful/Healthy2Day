@@ -1,0 +1,80 @@
+
+.slick-dots {
+    display: flex !important;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    bottom: -30px;
+}
+
+.slick-dots li {
+    margin: 0 5px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slick-dots li button {
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    width: 100%;
+}
+
+.slick-dots li.slick-active button:before {
+    content: '';
+    display: block;
+    width: 30px; 
+    height: 3px; 
+    background-color: #000;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.slick-dots li button:before {
+    content: '';
+    display: block;
+    width: 30px; 
+    height: 3px; 
+    background-color: #9B9B9B;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.slick-container {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.slick-prev,
+.slick-next {
+    cursor: pointer;
+    z-index: 1;
+    position: absolute;
+    top: calc(100% + 17px);
+}
+
+.slick-prev {
+    left: calc(50% - 150px);
+}
+
+.slick-next {
+    left: calc(50% + 150px);
+}
+
+.slick-prev::before,
+.slick-next::before {
+    content: url('/public/small_icons/SliderLeftArrow.svg');
+    display: inline-block;
+}
+
+.slick-next::before {
+    transform: rotate(180deg);
+}
