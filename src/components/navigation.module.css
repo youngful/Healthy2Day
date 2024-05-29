@@ -1,0 +1,147 @@
+.nav_menu, .nav_list{
+    display: flex;
+    align-items: center;
+}
+
+.nav_menu_phone{
+    display: none;
+}
+
+.nav_menu{
+    margin-top: 32px;
+    height: 54px;
+    padding: 5px;
+    max-width: 1334px;
+    justify-content: space-between;
+    margin: 32px auto;
+}
+
+.nav_list_item{
+    position: relative;
+}
+
+.nav_list_item a{
+    display: flex;
+}
+
+.nav_list{
+    gap: 48px;
+}
+
+.active_nav{
+    color: #000;
+    font-weight: 700;
+}
+
+
+.active_profile{
+    background-color: #fff;
+    padding: 12px 24px 12px 152px;
+    border-radius: 30px;
+}
+
+.active_profile svg path,
+.active_saved svg path {
+    fill: #000;
+}
+
+.active_saved{
+    background-color: #fff;
+    padding: 12px 24px 12px 120px;
+    border-radius: 30px;
+}
+
+.active_profile::before{
+    content: "My Account";
+    position: absolute;
+    top: 50%;
+    left: 24px;
+    transform: translateY(-50%);
+    font-weight: 600;
+}
+
+.active_saved::before{
+    content: "Saved";
+    position: absolute;
+    top: 50%;
+    left: 24px;
+    transform: translateY(-50%);
+    font-weight: 600;
+}
+
+.nav_menu_phone {
+    display: none;
+}
+
+.burger_menu_icon {
+    display: none;
+    margin-top: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+    margin-bottom: 40px;
+}
+
+.burger_line {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+}
+
+.burger_menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    z-index: 10;
+}
+
+.burger_nav_list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.burger_nav_list .nav_list_item {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.burger_nav_list .nav_list_item a {
+    width: 100%;
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px;
+}
+
+.burger_nav_list .nav_list_item a:hover,
+.burger_nav_list .nav_list_item a.active_nav {
+    background-color: #f0f0f0;
+}
+
+@media (max-width: 900px){
+    .nav_list{
+       gap: 20px;
+   }
+}
+
+@media (max-width: 768px) {
+    .nav_menu {
+        display: none;
+    }
+    .nav_menu_phone {
+        display: block;
+    }
+    .burger_menu_icon {
+        display: block;
+    }
+}

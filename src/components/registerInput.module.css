@@ -1,0 +1,43 @@
+.input_container{
+    position: relative;
+    max-width: 400px;
+    margin: 40px auto 0;
+    z-index: 2;
+}
+
+.label_name{
+    position: absolute;
+    left: 32px;
+    top: -20px;
+}
+
+.register_input{
+    display: block;
+    width: calc(100% - 65px);
+    line-height: 56px;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 400;
+    border: 0.5px solid #c9c9c9;
+    border-radius: 25px;
+    padding: 0 32px;
+    outline: none;
+    transition: all 0.5s;
+}
+
+.register_input:focus{
+    border: 0.5px solid #000;
+}
+
+.register_input::placeholder{
+    color: #c9c9c9;
+    font-size: 10px;
+}
+
+.password_icon{
+    cursor: pointer;
+    position: absolute;
+    right: 28px;
+    top: 28px;
+    transform: translateY(-50%);
+}
