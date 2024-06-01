@@ -50,8 +50,14 @@ function SignIn() {
         <img className={styles.sign_decoration} src='/images/signIn.svg' alt='Decoration' />
         <h2 className={styles.title}>SIGN IN</h2>
 
-        <InPut type={'email'} name={'Email'} placeholder={'Enter your email'} value={email} onChange={handleEmailChange} />
-        <InPut type={'password'} name={'Password'} placeholder={'Enter your password'} value={password} onChange={handlePasswordChange} />
+        <div className={styles.input_wrapper}>
+          <InPut type={'email'} name={'Email'} placeholder={'Enter your email'} value={email} onChange={handleEmailChange} />
+        </div>
+
+        <div className={styles.input_wrapper}>
+          <InPut type={'password'} name={'Password'} placeholder={'Enter your password'} value={password} onChange={handlePasswordChange} />
+        </div>
+
 
         <button className={styles.logIn_btn} onClick={handleLogInClick}>Log In</button>
 

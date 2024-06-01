@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styles from './registerInput.module.css';
 
-function RegisterInput({ name, type, placeholder, onChange }) {
+function RegisterInput({ name, value, type, placeholder, onChange }) {
     const [inputType, setInputType] = useState(type);
 
     const togglePasswordVisibility = () => {
@@ -20,6 +20,7 @@ function RegisterInput({ name, type, placeholder, onChange }) {
             <input
                 type={inputType}
                 placeholder={placeholder}
+                value={value}
                 className={styles.register_input}
                 onChange={handleChange}
             />
@@ -41,6 +42,7 @@ RegisterInput.propTypes = {
     placeholder: PropTypes.string,
     onChange: PropTypes.func.isRequired,
     className: PropTypes.string,
+    value: PropTypes.string,
 };
 
 export default RegisterInput;

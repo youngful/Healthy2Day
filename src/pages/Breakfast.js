@@ -24,9 +24,6 @@ function Breakfast() {
         const userData = await response.json();
         setUser(userData);
 
-        console.log(userData);
-
-
       } catch (error) {
         console.error('Error:', error);
       }
@@ -53,9 +50,6 @@ function Breakfast() {
 
         const breakfastData = await response.json();
         setDishes(breakfastData);
-
-        console.log(breakfastData);
-
 
 
       } catch (error) {

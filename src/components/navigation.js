@@ -31,6 +31,9 @@ function Navigation() {
             case '/dessert':
                 setActiveNavItem('dessert');
                 break;
+            case '/create':
+                setActiveNavItem('create');
+                break;
             case '/saved':
                 setActiveNavItem('saved');
                 break;
@@ -75,6 +78,9 @@ function Navigation() {
                     </li>
                     <li className={`${styles.nav_list_item} ${activeNavItem === 'dessert' ? styles.active_nav : ''}`}>
                         <Link to="/dessert" onClick={() => setActiveNavItem('dessert')}>Dessert</Link>
+                    </li>
+                    <li className={`${styles.nav_list_item} ${activeNavItem === 'create' ? styles.active_nav : ''}`}>
+                        <Link to="/create" onClick={() => setActiveNavItem('create')}>Create</Link>
                     </li>
                 </ul>
 
