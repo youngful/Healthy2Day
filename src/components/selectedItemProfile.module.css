@@ -1,0 +1,10 @@
+.item{
+    width: calc(100% - 40px);
+    background-color: #fff;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    padding: 0 20px;
+}

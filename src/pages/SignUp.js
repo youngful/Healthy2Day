@@ -34,7 +34,7 @@ function SignIn() {
     const handleSignUpClick = async () => {
         const data = { firstName, lastName, email, password };
         console.log(data);
-        
+
 
         try {
             const response = await fetch('http://localhost:3001/user/sign_up', {
@@ -51,7 +51,7 @@ function SignIn() {
 
             const result = await response.json();
             console.log('Success:', result);
-            navigate('/');
+            navigate('/signIn');
         } catch (error) {
             console.error('Error:', error);
         }
@@ -65,11 +65,26 @@ function SignIn() {
                 <img className={styles.sign_decoration} src='/images/signUp.svg' alt='Decoration' />
                 <h2 className={styles.title}>SIGN IN</h2>
 
-                <InPut type={'text'} name={'First Name'} placeholder={'Enter your first name'} value={firstName} onChange={handleFirstNameChange}/>
-                <InPut type={'text'} name={'Last Name'} placeholder={'Enter your last name'} value={lastName} onChange={handleLastNameChange}/>
-                <InPut type={'email'} name={'Email'} placeholder={'Enter your email'} value={email} onChange={handleEmailChange}/>
-                <InPut type={'password'} name={'Password'} placeholder={'Enter your password'} value={password} onChange={handlePasswordChange}/>
-                <InPut type={'password'} name={'Confirm Password'} placeholder={'Enter your password'} value={confirmPassword} onChange={handleConfirmPasswordChange}/>
+                <div className={styles.input_wrapper}>
+                    <InPut type={'text'} name={'First Name'} placeholder={'Enter your first name'} value={firstName} onChange={handleFirstNameChange} />
+
+                </div>
+                <div className={styles.input_wrapper}>
+                    <InPut type={'text'} name={'Last Name'} placeholder={'Enter your last name'} value={lastName} onChange={handleLastNameChange} />
+
+                </div>
+                <div className={styles.input_wrapper}>
+                    <InPut type={'email'} name={'Email'} placeholder={'Enter your email'} value={email} onChange={handleEmailChange} />
+
+                </div>
+                <div className={styles.input_wrapper}>
+                    <InPut type={'password'} name={'Password'} placeholder={'Enter your password'} value={password} onChange={handlePasswordChange} />
+
+                </div>
+                <div className={styles.input_wrapper}>
+                    <InPut type={'password'} name={'Confirm Password'} placeholder={'Enter your password'} value={confirmPassword} onChange={handleConfirmPasswordChange} />
+
+                </div>
 
                 <button className={styles.logIn_btn} onClick={handleSignUpClick}>Sign Up</button>
 

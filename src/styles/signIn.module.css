@@ -22,6 +22,12 @@
     text-align: center;
 }
 
+.input_wrapper{
+    margin: 40px auto 0;
+    max-width: 400px;
+    height: 56px;
+}
+
 .sign_decoration{
     position: absolute;
     right: -250px;

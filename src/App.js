@@ -7,11 +7,12 @@ import About from './pages/About';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import Breakfast from './pages/Breakfast';
-// import Dinner from './pages/Dinner';
-// import Supper from './pages/Supper';
-// import Dessert from './pages/Dessert';
-// import Saved from './pages/Saved';
-// import Profile from './pages/Profile';
+import Dinner from './pages/Dinner';
+import Supper from './pages/Supper';
+import Dessert from './pages/Dessert';
+import Saved from './pages/Saved';
+import Create from './pages/Create';
+import Profile from './pages/Profile';
 
 function App() {
   return (
@@ -37,11 +38,12 @@ function Main() {
         <Route path="/about" element={<About />} />
         <Route path="/nutrition" element={<Nutrition />} />
         <Route path="/breakfast" element={<Breakfast />} />
-        {/* <Route path="/dinner" element={<Dinner />} />
+        <Route path="/dinner" element={<Dinner />} />
         <Route path="/supper" element={<Supper />} />
         <Route path="/dessert" element={<Dessert />} />
         <Route path="/saved" element={<Saved />} />
-        <Route path="/profile" element={<Profile />} /> */}
+        <Route path="/create" element={<Create />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </div>
   );

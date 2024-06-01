@@ -1,0 +1,106 @@
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.dish_wrapper{
+    max-width: 1150px;
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    color: #000;
+    margin-bottom: 32px;
+}
+
+.dish_left{
+    margin-right: auto;
+}
+
+.dish_right{
+    flex-wrap: wrap-reverse;
+    margin-left: auto;
+    justify-content: right;
+    flex-flow: row-reverse;
+}
+
+.dish_right .dish_inner{
+    flex-flow: row-reverse;
+}
+
+.dish_img{
+    width: 400px;
+}
+
+.title_group{
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.dish_title{
+    font-size: 32px;
+    color: #000;
+    font-weight: 600;
+    text-transform: uppercase;
+    max-width: 625px;
+}
+
+.save_btn{
+    width: 64px;
+}
+
+.dish_inner{
+    display: flex;
+    gap: 32px;
+}
+
+.dish_ingradients{
+    max-width: 400px;
+}
+
+.dish_goods{
+    margin-bottom: 32px;
+}
+
+.dish_weight_kcal{
+    display: flex;
+    gap: 32px;
+}
+
+.dish_kcal, .dish_weight{
+    background-color: #FF002C;
+    color: #fff;
+    line-height: 48px;
+    border-radius: 25px;
+    width: 122px;
+    text-align: center;
+}
+
+.dish_weight{
+    background-color: transparent;
+    border: 0.5px solid #000;
+    color: #000;
+}
+
+.result_group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 16px auto 0;
+    width: 276px;
+    
+}
+
+.result_percentage{
+    width: 32px;
+    height: 32px;
+    background-color: #000;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+    justify-content: center;
+}
