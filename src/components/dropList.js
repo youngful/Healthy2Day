@@ -6,7 +6,7 @@ function Droplist({ options, onChange, value }) {
   const [selectedOption, setSelectedOption] = useState(value);
 
   useEffect(() => {
-    setSelectedOption(value); // Оновлюємо вибрану опцію залежно від отриманого значення
+    setSelectedOption(value);
   }, [value]);
 
   const handleOptionChange = (event) => {

@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import styles from './slider.module.css';
 
 function Slider({ name, min, max, value: propValue, onChange }) {
-    const [value, setValue] = useState(propValue); // Оновлюємо значення, що прийшло з пропсів
+    const [value, setValue] = useState(propValue);
 
     useEffect(() => {
-        setValue(propValue); // Перевизначаємо значення, коли вони змінюються
+        setValue(propValue); 
     }, [propValue]);
 
     const handleChange = (event) => {
@@ -30,7 +30,7 @@ function Slider({ name, min, max, value: propValue, onChange }) {
                 type="range"
                 min={min}
                 max={max}
-                value={value} // Використовуємо локальне значення, оновлене викликом useState
+                value={value}
                 className={styles.slider}
                 onChange={handleChange}
             />

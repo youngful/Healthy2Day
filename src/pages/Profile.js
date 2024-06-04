@@ -6,6 +6,8 @@ import SavedBlock from '../components/savedBlock';
 import CreatedBlock from '../components/createdBlock';
 import styles from '../styles/profile.module.css';
 import { useNavigate } from 'react-router-dom'; // Змінено імпорт
+const apiUrl = process.env.REACT_APP_API_URL;
+
 
 
 function Profile() {
@@ -28,7 +30,7 @@ function Profile() {
     useEffect(() => {
         const getUser = async () => {
             try {
-                const response = await fetch('http://localhost:3001/user/get_user', {
+                const response = await fetch(`${apiUrl}/user/get_user`, {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
@@ -125,7 +127,7 @@ function Profile() {
         const data = { firstName, lastName, age, height, weight, email, alergics: addedItems };
 
         try {
-            const response = await fetch('http://localhost:3001/user/update_profile', {
+            const response = await fetch(`${apiUrl}/user/update_profile`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -148,7 +150,7 @@ function Profile() {
 
     const handleLogOut = async () => {
         try {
-            const response = await fetch('http://localhost:3001/user/log_out', {
+            const response = await fetch(`${apiUrl}/user/log_out`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',

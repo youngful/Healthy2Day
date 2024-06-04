@@ -5,12 +5,12 @@ function ToggleSwitch({ onChange, value }) {
   const [activeButton, setActiveButton] = useState(value);
 
   useEffect(() => {
-    setActiveButton(value); // Оновлюємо значення кнопки в залежності від отриманого значення
+    setActiveButton(value);
   }, [value]);
 
   const handleToggle = (button) => {
     setActiveButton(button);
-    onChange(button === 'M' ? 'M' : 'W'); // Оновлюємо значення статі
+    onChange(button === 'M' ? 'M' : 'W');
   };
 
   return (

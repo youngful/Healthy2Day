@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from './catalog.module.css';
+const apiUrl = process.env.REACT_APP_API_URL;
+
 
 function Catalog({ user, dishes }) {
     const [savedDishes, setSavedDishes] = useState([]);
@@ -16,7 +18,7 @@ function Catalog({ user, dishes }) {
         try {
             let response;
             if (savedDishes.includes(dishId)) {
-                response = await fetch('http://localhost:3001/user/remove_saved_dish', {
+                response = await fetch(`${apiUrl}/user/remove_saved_dish`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -25,7 +27,7 @@ function Catalog({ user, dishes }) {
                     credentials: 'include'
                 });
             } else {
-                response = await fetch('http://localhost:3001/user/save_dish', {
+                response = await fetch(`${apiUrl}/user/save_dish`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
