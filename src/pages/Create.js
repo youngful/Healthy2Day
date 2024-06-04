@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Search from '../components/searchInput';
 import styles from '../styles/create.module.css';
 import Item from '../components/selectedItem';
+const apiUrl = process.env.REACT_APP_API_URL;
 
 function Create() {
     const [dishName, setDishName] = useState('');
@@ -71,7 +72,7 @@ function Create() {
         if (dishName === '' || addedItems.length === 0 || totalCalories === 0 || totalWeight === 0) {
             console.log('Please fill in all required fields.');
         } else {
-            fetch('http://localhost:3001/user/create_dish', {
+            fetch(`${apiUrl}/user/create_dish`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

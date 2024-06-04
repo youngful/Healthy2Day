@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Змінено імпорт
 import styles from '../styles/signIn.module.css';
 import InPut from '../components/registerInput';
+const apiUrl = process.env.REACT_APP_API_URL;
 
 function SignIn() {
   const [email, setEmail] = useState('');
@@ -20,7 +21,7 @@ function SignIn() {
     const data = { email, password };
 
     try {
-      const response = await fetch('http://localhost:3001/user/log_in', {
+      const response = await fetch(`${apiUrl}/user/log_in`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

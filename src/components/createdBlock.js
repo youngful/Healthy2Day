@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from './createdBlock.module.css';
+const apiUrl = process.env.REACT_APP_API_URL;
+
 
 function SavedBlock({ user, items }) {
     const [savedDishes, setSavedDishes] = useState([]);
@@ -22,7 +24,7 @@ function SavedBlock({ user, items }) {
         const data = { dishId };
 
         try {
-            let response = await fetch('http://localhost:3001/user/remove_created_dish', {
+            let response = await fetch(`${apiUrl}/user/remove_created_dish`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

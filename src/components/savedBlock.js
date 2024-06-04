@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from './savedBlock.module.css';
+const apiUrl = process.env.REACT_APP_API_URL;
+
 
 function SavedBlock({ user, items }) {
     const [savedDishes, setSavedDishes] = useState([]);
@@ -24,7 +26,7 @@ function SavedBlock({ user, items }) {
         try {
             let response;
             if (savedDishes.includes(dishId)) {
-                response = await fetch('http://localhost:3001/user/remove_saved_dish', {
+                response = await fetch(`${apiUrl}/user/remove_saved_dish`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -33,7 +35,7 @@ function SavedBlock({ user, items }) {
                     credentials: 'include'
                 });
             } else {
-                response = await fetch('http://localhost:3001/user/save_dish', {
+                response = await fetch(`${apiUrl}/user/save_dish`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

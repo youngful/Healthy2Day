@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Catalog from '../components/catalog'
+const apiUrl = process.env.REACT_APP_API_URL;
+
 // import styles from '../styles/breakfast.module.css';
 
 function Dinner() {
@@ -9,7 +11,7 @@ function Dinner() {
   useEffect(() => {
     const getUser = async () => {
       try {
-        const response = await fetch('http://localhost:3001/user/get_user', {
+        const response = await fetch(`${apiUrl}/user/get_user`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -36,7 +38,7 @@ function Dinner() {
     const getBreakfast = async () => {
       try {
         const type = "dinner";
-        const response = await fetch(`http://localhost:3001/dish/get_dishes?type=${type}`, {
+        const response = await fetch(`${apiUrl}/dish/get_dishes?type=${type}`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',

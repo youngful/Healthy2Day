@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import styles from '../styles/signUp.module.css';
 import InPut from '../components/registerInput'
 import { useNavigate } from 'react-router-dom'; // Змінено імпорт
+const apiUrl = process.env.REACT_APP_API_URL;
+
 
 function SignIn() {
     const [firstName, setFirstName] = useState('');
@@ -37,7 +39,7 @@ function SignIn() {
 
 
         try {
-            const response = await fetch('http://localhost:3001/user/sign_up', {
+            const response = await fetch(`${apiUrl}/user/sign_up`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

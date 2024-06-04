@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import styles from './searchInput.module.css';
+const apiUrl = process.env.REACT_APP_API_URL;
+
 
 function GoodsSearch({ onAddItem, name }) {
     const [searchInput, setSearchInput] = useState('');
@@ -9,7 +11,7 @@ function GoodsSearch({ onAddItem, name }) {
 
     const handleSearch = useCallback(async (query) => {
         try {
-            const response = await fetch(`http://localhost:3001/goods/search?search=${query}`);
+            const response = await fetch(`${apiUrl}/goods/search?search=${query}`);
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }

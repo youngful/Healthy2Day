@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Catalog from '../components/catalog'
 import styles from '../styles/saved.module.css';
+const apiUrl = process.env.REACT_APP_API_URL;
+
 
 function Saved() {
   const [user, setUser] = useState(null);
@@ -9,7 +11,7 @@ function Saved() {
   useEffect(() => {
     const getUser = async () => {
       try {
-        const response = await fetch('http://localhost:3001/user/get_user', {
+        const response = await fetch(`${apiUrl}/user/get_user`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',

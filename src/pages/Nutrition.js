@@ -3,6 +3,8 @@ import styles from '../styles/nutrition.module.css';
 import ToggleSwitch from '../components/toggleSwich';
 import Slider from '../components/slider';
 import Droplist from '../components/dropList';
+const apiUrl = process.env.REACT_APP_API_URL;
+
 
 function Nutration() {
   const [selectedActivity, setSelectedActivity] = useState({
@@ -53,7 +55,7 @@ function Nutration() {
   useEffect(() => {
     const getUser = async () => {
       try {
-        const response = await fetch('http://localhost:3001/user/get_user', {
+        const response = await fetch(`${apiUrl}/user/get_user`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -126,7 +128,7 @@ function Nutration() {
     console.log(data);
 
     try {
-      const response = await fetch('http://localhost:3001/user/setProperties', {
+      const response = await fetch(`${apiUrl}/user/setProperties`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
